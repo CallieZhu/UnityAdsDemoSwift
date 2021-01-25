@@ -99,15 +99,6 @@ class ViewController: UIViewController, UnityAdsInitializationDelegate, UnityAds
     }
 
     @IBAction func bannerButtonTapped(_ sender: Any) {
-//        if bannerButton.titleLabel?.text == "Hide Banner" {
-//            // close banner
-////            UnityAdsBanner.destroy()
-//            bannerView?.removeFromSuperview()
-//            bannerView = nil
-//            bannerButton.setTitle("Show Banner", for: .normal)
-//        } else {
-            // load banner
-//            bannerButton.setTitle("Hide Banner", for: .normal)
 
         let bannerView = UADSBannerView(placementId: "bannerads", size: CGSize(width: 320, height: 50))
         bannerView.delegate = self
