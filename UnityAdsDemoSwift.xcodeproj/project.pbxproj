@@ -15,6 +15,7 @@
 		23F924DD25BEDD130019EFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F924DB25BEDD130019EFBA /* LaunchScreen.storyboard */; };
 		23F924E825BEDD130019EFBA /* UnityAdsDemoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F924E725BEDD130019EFBA /* UnityAdsDemoSwiftTests.swift */; };
 		23F924F325BEDD130019EFBA /* UnityAdsDemoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F924F225BEDD130019EFBA /* UnityAdsDemoSwiftUITests.swift */; };
+		23F9250C25BEDEF10019EFBA /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F9250B25BEDEF10019EFBA /* UnityAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		23F924EE25BEDD130019EFBA /* UnityAdsDemoSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnityAdsDemoSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F924F225BEDD130019EFBA /* UnityAdsDemoSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityAdsDemoSwiftUITests.swift; sourceTree = "<group>"; };
 		23F924F425BEDD130019EFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F9250B25BEDEF10019EFBA /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F9250C25BEDEF10019EFBA /* UnityAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				23F924E625BEDD130019EFBA /* UnityAdsDemoSwiftTests */,
 				23F924F125BEDD130019EFBA /* UnityAdsDemoSwiftUITests */,
 				23F924CE25BEDD110019EFBA /* Products */,
+				23F9250A25BEDEF10019EFBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				23F924F425BEDD130019EFBA /* Info.plist */,
 			);
 			path = UnityAdsDemoSwiftUITests;
+			sourceTree = "<group>";
+		};
+		23F9250A25BEDEF10019EFBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23F9250B25BEDEF10019EFBA /* UnityAds.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -438,6 +450,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79P66H47Y6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UnityAdsDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +473,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79P66H47Y6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = UnityAdsDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
