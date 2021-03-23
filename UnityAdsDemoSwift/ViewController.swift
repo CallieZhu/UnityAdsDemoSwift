@@ -13,7 +13,28 @@ private let kDefaultGameId = "14850"
 private let kGameIdKey = "adsExampleAppGameId"
 private var kMediationOrdinal = 1
 
-class ViewController: UIViewController, UnityAdsInitializationDelegate, UnityAdsDelegate, UADSBannerViewDelegate {
+class ViewController: UIViewController, UnityAdsInitializationDelegate, UnityAdsDelegate, UADSBannerViewDelegate, UnityAdsShowDelegate {
+    func unityAdsShowComplete(_ placementId: String, withFinish state: UnityAdsShowCompletionState) {
+        print("UnityAds Completed: \(placementId) - \(state)")
+    }
+    
+    func unityAdsShowFailed(_ placementId: String, withError error: UnityAdsShowError, withMessage message: String) {
+        print("UnityAds show Failed for placement:\(placementId), \(error) - \(message)")
+        let alert = UIAlertController(title: "UnityAds Show Error", message: "\(placementId) - \(error) - \(message)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { action in
+        })
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
+    func unityAdsShowStart(_ placementId: String) {
+        print("UnityAds Started: \(placementId)")
+    }
+    
+    func unityAdsShowClick(_ placementId: String) {
+        print("UnityAds Clicked: \(placementId)")
+    }
+    
     
     // view outlets
     @IBOutlet weak var interstitialButton: UIButton!
@@ -78,7 +99,7 @@ class ViewController: UIViewController, UnityAdsInitializationDelegate, UnityAds
             kMediationOrdinal += 1
             mediationMetaData.commit()
 
-            UnityAds.show(self, placementId: incentivizedPlacementId ?? "rewardedVideo")
+            UnityAds.show(self, placementId: incentivizedPlacementId ?? "rewardedVideo", showDelegate: self)
         }
     }
     
@@ -94,7 +115,7 @@ class ViewController: UIViewController, UnityAdsInitializationDelegate, UnityAds
             kMediationOrdinal += 1
             mediationMetaData.commit()
 
-            UnityAds.show(self, placementId: interstitialPlacementId ?? "video")
+            UnityAds.show(self, placementId: interstitialPlacementId ?? "video", showDelegate: self)
         }
     }
 
